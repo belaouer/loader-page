@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "./components/Loader";
-import {useState } from "react";
+import { useState } from "react";
 import Image from "./components/Image";
 
 function App() {
@@ -9,11 +9,11 @@ function App() {
   return (
     <AnimatePresence>
       {!isComplete ? (
-        <motion.div key="test">
-          <Loader setIsComplete={setIsComplete} />
-        </motion.div>
+        <Loader setIsComplete={setIsComplete} />
       ) : (
-        <Image />
+        <motion.div className="relative h-[200vh]">
+          <Image />
+        </motion.div>
       )}
     </AnimatePresence>
   );

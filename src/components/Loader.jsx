@@ -45,7 +45,7 @@ const itemMainVariant = {
 
 const Loader = ({ setIsComplete }) => {
   return (
-    <motion.div className="w-screen h-screen xl:bg-yellow-200">
+    <motion.div className="w-screen h-screen ">
       <motion.div
         variants={containerVariant}
         onAnimationComplete={() => setIsComplete(true)}
@@ -56,7 +56,7 @@ const Loader = ({ setIsComplete }) => {
       >
         <motion.div
           variants={itemVariant}
-          className="absolute 2xl:w-[400px] left-[16%] bottom-[14%]"
+          className="absolute  xl:w-[300px] 2xl:w-[400px] left-[16%] bottom-[14%]"
         >
           <img src={Image1} />
         </motion.div>
@@ -64,23 +64,23 @@ const Loader = ({ setIsComplete }) => {
           variants={itemMainVariant}
           className="overflow-x-hidden w-screen h-screen flex justify-center items-center z-10"
         >
-          <motion.img src={Image2} className="2xl:w-[800px]" />
+          <motion.img src={Image2} className="xl:w-[600px] 2xl:w-[800px]" />
         </motion.div>
         <motion.div
           variants={itemVariant}
-          className="absolute 2xl:w-[300px] right-[12%] top-[8%]"
+          className="absolute xl:w-[200px] 2xl:w-[300px] right-[12%] top-[8%]"
         >
           <img src={Image3} />
         </motion.div>
         <motion.div
           variants={itemVariant}
-          className="absolute 2xl:w-[400px]  right-[20%] bottom-[10%] z-20"
+          className="absolute xl:w-[300px] 2xl:w-[400px]  right-[20%] bottom-[10%] z-20"
         >
           <img src={Image4} />
         </motion.div>
         <motion.div
           variants={itemVariant}
-          className="absolute  2xl:w-[280px] left-[14%] top-[12%]"
+          className="absolute xl:w-[200px]  2xl:w-[280px] left-[14%] top-[12%]"
         >
           <img src={Image5} />
         </motion.div>

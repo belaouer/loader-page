@@ -4,22 +4,27 @@ import { motion } from "framer-motion";
 
 const imageVariant = {
   visible: {
-    y: "70%",
+    y: 130,
+    transformOrigin: "top",
     width: "90%",
-    transition: { duration: 1.5, ease: [0.33, 1, 0.68, 1] },
+    transition: {
+      duration: 1.5,
+      ease: "easeOut",
+    },
   },
 };
 
 const Image = () => {
   return (
-    <motion.div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-20 overflow-x-hidden lg:bg-red-200 xl:bg-yellow-200 2xl:bg-blue-300">
+    <div className="relative h-screen w-full">
       <motion.img
-        className="absolute w-[800px]"
+        className="w-[800px] absolute top-1/2 left-1/2"
+        style={{ x: "-50%", y: "-50%" }}
+        src={Image2}
         variants={imageVariant}
         animate="visible"
-        src={Image2}
       />
-    </motion.div>
+    </div>
   );
 };
 
