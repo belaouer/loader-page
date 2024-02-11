@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="absolute top-28  left-0 w-full bottom-24 z-20 leading-none">
-      <div className="flex justify-between items-center">
+    <section className="absolute top-28  left-0 w-full bottom-0 2xl:bottom-24 z-20 leading-none ">
+      <div className="flex justify-between items-center ">
         <div className=" w-full">
-          <h1 className="text-[240px] font-medium tracking-tighter overflow-hidden flex flex-nowrap">
+          <h1 className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter overflow-hidden flex flex-nowrap">
             {"brand".split("").map((lettre, i) => {
               return (
                 <AnimatedLetter key={i} index={i}>
@@ -39,7 +39,7 @@ const Hero = () => {
         }}
         className="relative w-[200vw]"
       >
-        <p className="absolute h-fit left-1/4 -translate-x-1/2 text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
+        <p className="absolute h-fit left-1/4 -translate-x-1/2 text-[200px] 2xl:text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
           {"experience".split("").map((lettre, i) => {
             return (
               <AnimatedLetter key={i} index={i}>
@@ -48,18 +48,23 @@ const Hero = () => {
             );
           })}
         </p>
-        <p className="absolute left-[75%] -translate-x-1/2 top-0 text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
+        <p className="absolute left-[75%] -translate-x-1/2 top-0 text-[200px]  2xl:text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
           experience
         </p>
       </motion.div>
 
-      <div className="absolute bottom-0 w-full  flex justify-center items-center ">
-        <div className="mr-16 flex flex-col justify-center items-center bg-white p-11 rounded-full gap-y-1 font-medium">
+      <div className="absolute bottom-0 w-full  flex justify-center items-center">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+          className="mr-16 flex flex-col justify-center items-center bg-white p-11 rounded-full gap-y-1 font-medium"
+        >
           <p>scroll</p>
           <p>dwon</p>
-        </div>
+        </motion.div>
         <div className="overflow-hidden pr-1">
-          <p className="text-[240px] font-medium tracking-tighter">
+          <p className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter">
             {"studio".split("").map((lettre, i) => {
               return (
                 <AnimatedLetter key={i} index={i}>

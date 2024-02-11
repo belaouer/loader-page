@@ -17,7 +17,7 @@ const imageVariant = {
 const Image = () => {
   return (
     <motion.img
-      className="w-[800px] absolute top-1/2 left-1/2 z-10"
+      className="w-[800px] absolute top-1/2 left-1/2 z-10 "
       style={{ x: "-50%", y: "-50%" }}
       src={Image2}
       variants={imageVariant}
