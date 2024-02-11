@@ -3,6 +3,7 @@ import Loader from "./components/Loader";
 import { useState } from "react";
 import Image from "./components/Image";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   const [isComplete, setIsComplete] = useState(false);
@@ -10,12 +11,13 @@ function App() {
   return (
     <AnimatePresence>
       {!isComplete ? (
-        <Loader setIsComplete={setIsComplete} />
+        <Loader setIsComplete={setIsComplete} key="loader" />
       ) : (
-        <motion.div className="relative h-[200vh]">
-          <Navbar/>
+        <>
+          <Navbar />
+          <Hero />
           <Image />
-        </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

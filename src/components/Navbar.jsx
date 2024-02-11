@@ -22,7 +22,7 @@ const Navbar = () => {
       variants={headerVariant}
       initial="hidden"
       animate="visible"
-      className="w-full h-28 flex justify-center items-center"
+      className="absolute top-0 left-0 w-full h-28 flex justify-center items-center z-20"
     >
       <nav className="w-[93%] flex justify-between items-center text-xs font-semibold">
         <div className="text-2xl font-bold w-full">Ollie</div>

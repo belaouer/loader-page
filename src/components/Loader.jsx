@@ -45,7 +45,7 @@ const itemMainVariant = {
 
 const Loader = ({ setIsComplete }) => {
   return (
-    <motion.div className="w-screen h-screen ">
+    <motion.div className="w-screen h-screen">
       <motion.div
         variants={containerVariant}
         onAnimationComplete={() => setIsComplete(true)}
