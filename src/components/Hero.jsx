@@ -3,19 +3,17 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="absolute top-28  left-0 w-full bottom-0 2xl:bottom-24 z-20 leading-none ">
-      <div className="flex justify-between items-center ">
-        <div className=" w-full">
-          <h1 className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter overflow-hidden flex flex-nowrap">
-            {"brand".split("").map((lettre, i) => {
-              return (
-                <AnimatedLetter key={i} index={i}>
-                  {lettre}
-                </AnimatedLetter>
-              );
-            })}
-          </h1>
-        </div>
+    <div className="w-full h-full leading-none flex flex-col justify-between ">
+      <div className="flex justify-between items-center h-full">
+        <h1 className="w-full text-[200px] 2xl:text-[240px] font-medium tracking-tighter overflow-hidden flex flex-nowrap">
+          {"brand".split("").map((lettre, i) => {
+            return (
+              <AnimatedLetter key={i} index={i}>
+                {lettre}
+              </AnimatedLetter>
+            );
+          })}
+        </h1>
         <div className="w-full flex flex-col justify-center items-center overflow-hidden py-2">
           <motion.div
             initial={{ y: "100%" }}
@@ -30,16 +28,16 @@ const Hero = () => {
       </div>
 
       <motion.div
-        animate={{ x: "-50%" }}
+        className="relative w-full h-full  flex justify-center"
+        animate={{ x: "-100%" }}
         transition={{
           duration: 5,
           delay: 1.5,
           ease: "linear",
           repeat: Infinity,
         }}
-        className="relative w-[200vw]"
       >
-        <p className="absolute h-fit left-1/4 -translate-x-1/2 text-[200px] 2xl:text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
+        <h1 className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter overflow-y-hidden">
           {"experience".split("").map((lettre, i) => {
             return (
               <AnimatedLetter key={i} index={i}>
@@ -47,35 +45,35 @@ const Hero = () => {
               </AnimatedLetter>
             );
           })}
-        </p>
-        <p className="absolute left-[75%] -translate-x-1/2 top-0 text-[200px]  2xl:text-[240px] font-medium tracking-tighter flex flex-nowrap overflow-y-hidden">
+        </h1>
+
+        <h1 className="absolute left-[150%] -translate-x-1/2 text-[200px]  2xl:text-[240px] font-medium tracking-tighter overflow-y-hidden">
           experience
-        </p>
+        </h1>
       </motion.div>
 
-      <div className="absolute bottom-0 w-full  flex justify-center items-center">
+      <div className="relative w-full h-full flex justify-center items-center ">
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-          className="mr-16 flex flex-col justify-center items-center bg-white p-11 rounded-full gap-y-1 font-medium"
+          className="mr-14 flex flex-col justify-center items-center bg-white p-11 rounded-full gap-y-1 font-medium"
         >
           <p>scroll</p>
           <p>dwon</p>
         </motion.div>
-        <div className="overflow-hidden pr-1">
-          <p className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter">
-            {"studio".split("").map((lettre, i) => {
-              return (
-                <AnimatedLetter key={i} index={i}>
-                  {lettre}
-                </AnimatedLetter>
-              );
-            })}
-          </p>
-        </div>
+
+        <h1 className="text-[200px] 2xl:text-[240px] font-medium tracking-tighter overflow-hidden">
+          {"studio".split("").map((lettre, i) => {
+            return (
+              <AnimatedLetter key={i} index={i}>
+                {lettre}
+              </AnimatedLetter>
+            );
+          })}
+        </h1>
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -84,7 +82,7 @@ export default Hero;
 export const AnimatedLetter = ({ children, index }) => {
   return (
     <motion.span
-      className="inline-block"
+      className="inline-block leading-none "
       initial={{ y: "100%" }}
       animate={{ y: 0 }}
       transition={{

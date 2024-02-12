@@ -15,7 +15,9 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <Hero />
+          <section className=" w-full h-[70%] 2xl:h-[80%] absolute z-20 top-20 ">
+            <Hero />
+          </section>
           <Image />
         </>
       )}
