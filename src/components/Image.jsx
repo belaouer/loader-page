@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const imageVariant = {
   visible: {
     y: 250,
-    transformOrigin: "top",
+
     width: "90%",
     transition: {
       duration: 1.5,
